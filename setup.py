@@ -4,19 +4,19 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='example_pypi_package',
+    name='mypkg',
     author='Tom Chen',
     author_email='tomchen.org@gmail.com',
     description='Example PyPI (Python Package Index) Package',
     keywords='example, pypi, package',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/tomchen/example_pypi_package',
+    url='https://github.com/tomchen/mypkg',
     project_urls={
-        'Documentation': 'https://github.com/tomchen/example_pypi_package',
+        'Documentation': 'https://github.com/tomchen/mypkg',
         'Bug Reports':
-        'https://github.com/tomchen/example_pypi_package/issues',
-        'Source Code': 'https://github.com/tomchen/example_pypi_package',
+        'https://github.com/tomchen/mypkg/issues',
+        'Source Code': 'https://github.com/tomchen/mypkg',
         # 'Funding': '',
         # 'Say Thanks!': '',
     },
@@ -44,10 +44,10 @@ setuptools.setup(
         'dev': ['check-manifest'],
         # 'test': ['coverage'],
     },
-    # entry_points={
-    #     'console_scripts': [  # This can provide executable scripts
-    #         'run=examplepy:main',
-    # You can execute `run` in bash to run `main()` in src/examplepy/__init__.py
-    #     ],
-    # },
+    entry_points={
+        'console_scripts': [  # This can provide executable scripts
+            'mypkg=mypkg:main',
+    # You can execute `run` in bash to run `main()` in src/mypkg/__init__.py
+        ],
+    },
 )
